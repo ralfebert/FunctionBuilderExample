@@ -1,0 +1,17 @@
+name: FunctionBuilderExample
+options:
+  bundleIdPrefix: com.example
+  generateEmptyDirectories: true
+  deploymentTarget:
+    iOS: "10.0"
+targets:
+  FunctionBuilderExample:
+    type: application
+    platform: iOS
+    sources:
+      - path: FunctionBuilderExample
+        excludes:
+          - "Assets/*.sketch"
+    settings:
+      base:
+        SWIFT_VERSION: 5.0
