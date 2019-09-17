@@ -1,4 +1,5 @@
 // © 2019 Ralf Ebert — FunctionBuilderExample
+// License: https://opensource.org/licenses/MIT
 
 import UIKit
 
