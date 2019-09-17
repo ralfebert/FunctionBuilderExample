@@ -14,13 +14,13 @@ class FunctionBuilderExampleTests: XCTestCase {
         //         - Bob
         //     - bar
 
-        let root = Node(name: "root") {
-            Node(name: "foo") {
-                Node(name: "Alice")
+        let root = Node(name: "root", children: [
+            Node(name: "foo", children: [
+                Node(name: "Alice"),
                 Node(name: "Bob")
-            }
+            ]),
             Node(name: "bar")
-        }
+        ])
 
         XCTAssertEqual(root.name, "root")
         XCTAssertEqual(root.children[0].name, "foo")

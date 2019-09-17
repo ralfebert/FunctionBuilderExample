@@ -3,15 +3,6 @@
 
 import Foundation
 
-@_functionBuilder
-struct NodeListBuilder {
-    
-    static func buildBlock(_ children: Node...) -> [Node] {
-        return children
-    }
-    
-}
-
 class Node {
 
     var name: String
@@ -22,9 +13,9 @@ class Node {
         self.children = []
     }
 
-    init(name: String, @NodeListBuilder _ children: () -> [Node]) {
+    init(name: String, children: [Node]) {
         self.name = name
-        self.children = children()
+        self.children = children
     }
 
 }
